@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <main class="bg-black text-[white] h-screen">
+    <div id="nav" class="flex justify-between px-20 py-5 font-[Helvetica] border-b-[0.01rem] border-neutral-500">
+      <div id="project" class="h-8 w-48 bg-white font-regular rounded-lg text-xl font-[monument] text-black flex justify-center items-center">
+        <h1 class="tracking-[0.01rem]">Project</h1>
+      </div>
+      <div class="flex gap-20 items-center">
+        <div class="navlinks flex gap-20 items-center">
+            <h1>Home</h1>
+            <h1 class="flex justify-between gap-2 items-center">
+                <div class="h-2 w-2 bg-orange-500 rounded-full "></div>
+                About
+            </h1>
+            <h1>Contact</h1>
+        </div>
+        <div class="navlinks border-l-[2px] border-neutral-600 pl-6 ">
+            <h1>Profile</h1>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="text-[9.5rem] text-center">
+        <div class="student">Accreditation</div>
+        <div class="student">Simplified</div>
+      </div>
+      <div class="flex justify-between mx-20 mt-20">
+        <button class="border bg-zinc-900 border-white p-4 font-bold rounded-lg text-xl flex justify-between gap-4 hover:bg-neutral-800"><h1 class="">Create Student</h1><i class="ri-arrow-right-up-line text-white"></i></button>
+        <button class="border  bg-zinc-900  border-white p-4 rounded-lg font-bold text-xl hover:bg-neutral-800 gap-4 flex justify-between"><h1 class="">Update Details</h1><i class="ri-arrow-right-up-line text-white"></i></button>
+        <button class="border  bg-zinc-900  border-[antiquewhite] p-4 rounded-lg hover:bg-neutral-800 font-bold text-xl flex justify-between gap-4"><h1 class="">Get Details</h1><i class="ri-arrow-right-up-line text-white"></i></button>
+      </div>
+    </div>
+  </main>
+  <script>
+    var tl = gsap.timeline();
+    tl.from(".navlinks", {
+      opacity:0,
+      y: 40,
+      duration: 0.9,
+      ease: "power1.out",
+      stagger: 0.2
+    });
+    tl.from(".student" , {
+        opacity:0 ,
+        y: 40,
+        duration: 0.8,
+        ease:"power1.out"
+    })
+    tl.from("button" , {
+        opacity:0,
+        y: 10
+    })
+  </script>
+</body>
+</html>
